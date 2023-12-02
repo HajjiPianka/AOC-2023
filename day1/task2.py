@@ -29,6 +29,6 @@ for i in f:
     num2 = digit(i,True)
     number = merge_ints(num1,num2)
     sum += number
-file = open('result2.txt','w')
+file = open('./day1/result2.txt','w')
 file.write(f'Answer: {sum}')
 file.close()
