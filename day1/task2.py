@@ -6,10 +6,11 @@ def digit(string: str, reverse: bool = False):
     '''Returns first digit of a string, parsed with second argument returns last digit'''
     string = string.strip()
     ###part 2
-    # replac estings with digits
+    # insert digits into detected numbers
     strings =  ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-    for i in range(len(strings)):
-        string = string.replace(strings[i],str(i+1))
+    numbers = ['o1e', 't2o', 't3e', 'f4r', 'f5e', 's6x', 's7n', 'e8t', 'n9e']
+    for i in range(9):
+        string = string.replace(strings[i],numbers[i])
     ###
     if reverse:
         string = string[::-1]
