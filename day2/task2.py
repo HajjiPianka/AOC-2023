@@ -1,9 +1,7 @@
 file = open('./day2/data.txt','r')
 f = file.readlines()
 file.close()
-#data
-red, green, blue = 12, 13, 14
-
+"""
 def is_valid(number: int, color: str) -> bool:
     '''checks if number of specific cubes is allowed'''
     match color:
@@ -19,7 +17,7 @@ def is_valid(number: int, color: str) -> bool:
             if number > blue:
                 return False
             return True
-
+"""
 def draws(draws: list[str]) -> bool:
     for draw in draws:
         cubes = draw.split(',')
@@ -28,9 +26,9 @@ def draws(draws: list[str]) -> bool:
             cube = cube.split(' ')
             quantity = int(cube[0]) #get number of cubes
             color = cube[1] #get color of cubes
-            if not is_valid(quantity, color):
-                return False
-    return True
+            # if not is_valid(quantity, color):
+            #     return False
+    # return True
 
 sum = 0
 for i in f:
@@ -40,6 +38,6 @@ for i in f:
     if draws(i):
         sum += int(id)
 
-file = open('./day2/result1.txt','w')
+file = open('./day2/result2.txt','w')
 file.write(f'Answer: {sum}')
 file.close()
